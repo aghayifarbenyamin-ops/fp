@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: kivy/buildozer:python3.8
+      image: kivy/buildozer:latest
+
+    env:
+      BUILDOZER_NO_ROOT_CHECK: 1
 
     steps:
       - name: Checkout repository
